@@ -1,0 +1,152 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Soft, clinical background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Styling */
+.appointment-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h2 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.9rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccd1d9;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3498db; /* Doctor/medical blue */
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Hidden message container for our future JS logic */
+.status-message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+
+/* Add this below your existing body styles */
+
+.main-wrapper {
+    display: flex;
+    gap: 30px;
+    max-width: 900px; /* Wider to accommodate both sections */
+    width: 100%;
+}
+
+.clinic-info {
+    flex: 1; /* Takes up half the space */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details {
+    margin: 20px 0;
+    font-size: 0.95rem;
+    color: #34495e;
+    line-height: 1.8;
+}
+
+.map-container {
+    margin-top: auto; /* Pushes the map to the bottom */
+    border-radius: 8px;
+    overflow: hidden; /* Keeps the map corners rounded */
+    border: 1px solid #ccd1d9;
+}
+
+/* Ensure the form still takes up half the space */
+.appointment-container {
+    flex: 1; 
+    /* Keep your existing .appointment-container styles here */
+}
+
+/* Mobile Responsiveness: Stacks the columns on small screens */
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+}
